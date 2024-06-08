@@ -10,15 +10,15 @@
 
 	<model-viewer 
 		style="width: 100%; height: 100%;"
-		src="../glb/tortuga_verde.glb" 
-		poster="../../assets/ShopifyModels/Chair.webp" 
+		src="../glb/dinosaurios/Ankylosaurus.glb" 
+		poster="../img/Chair.webp" 
 		tone-mapping="neutral" 
 		shadow-intensity="1" 
 		autoplay
 		ar 
 		camera-controls
 		touch-action="pan-y" 
-		alt="A 3D model carousel">
+		alt="Dinosaurios 3D">
 	  
 	  <button slot="ar-button" id="ar-button">
 		View in your space
@@ -34,16 +34,17 @@
 
 	  <div class="slider">
 		<div class="slides">
-		  <button class="slide selected" onclick="switchSrc(this, 'tortuga_verde')" style="background-image: url('../../assets/ShopifyModels/Chair.webp');">
-
-		  </button><button class="slide" onclick="switchSrc(this, 'Velociraptor')" style="background-image: url('../../assets/ShopifyModels/Mixer.webp');">
-
-		  </button><button class="slide" onclick="switchSrc(this, 'tortuga_verde')" style="background-image: url('../../assets/ShopifyModels/GeoPlanter.webp');">
-		  
-		  </button><button class="slide" onclick="switchSrc(this, 'ToyTrain')" style="background-image: url('../../assets/ShopifyModels/ToyTrain.webp');">
-		  
-		  </button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('../../assets/ShopifyModels/Canoe.webp');">    
-		</button></div>
+		  <button class="slide selected" onclick="switchSrc(this, 'Ankylosaurus')" style="background-image: url('../img/Chair.webp');">
+		  </button><button class="slide" onclick="switchSrc(this, 'Brachiosaurus')" style="background-image: url('../img/Mixer.webp');">
+		  </button><button class="slide" onclick="switchSrc(this, 'Dilophosaurus')" style="background-image: url('../img/GeoPlanter.webp');">
+		  </button><button class="slide" onclick="switchSrc(this, 'Parasaurolophus')" style="background-image: url('../img/ToyTrain.webp');">
+		  </button><button class="slide" onclick="switchSrc(this, 'Pteranodon')" style="background-image: url('../img/Canoe.webp');">    
+		  <button class="slide selected" onclick="switchSrc(this, 'Spinosaurus')" style="background-image: url('../img/Chair.webp');">
+		  </button><button class="slide" onclick="switchSrc(this, 'Stegosaurus')" style="background-image: url('../img/Mixer.webp');">
+		  </button><button class="slide" onclick="switchSrc(this, 'Triceratops')" style="background-image: url('../img/GeoPlanter.webp');">
+		  </button><button class="slide" onclick="switchSrc(this, 'Tyrannosaurus')" style="background-image: url('../img/ToyTrain.webp');">
+		  </button><button class="slide" onclick="switchSrc(this, 'Velociraptor')" style="background-image: url('../img/Canoe.webp');">    
+		  </button></div>
 	  </div>
 	</model-viewer>
 
@@ -51,7 +52,7 @@
 	  const modelViewer = document.querySelector("model-viewer");
 
 	  window.switchSrc = (element, name) => {
-		const base = "../glb/" + name;
+		const base = "../glb/dinosaurios/" + name;
 		modelViewer.src = base + '.glb';
 		modelViewer.poster = base + '.webp';
 		const slides = document.querySelectorAll(".slide");
