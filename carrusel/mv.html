@@ -54,6 +54,7 @@
 	  window.switchSrc = (element, name) => {
 		const base = "../glb/dinosaurios/" + name;
 		modelViewer.src = base + '.glb';
+		<audio src="../glb/dinosaurios/Ankylosaurus.ogg" autoplay loop></audio>
 		modelViewer.poster = base + '.webp';
 		const slides = document.querySelectorAll(".slide");
 		slides.forEach((element) => {element.classList.remove("selected");});
